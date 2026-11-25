@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abderrahmen Mira | Data Engineer, Salzburg</title>
+<meta name="description" content="Abderrahmen Mira is a data engineer in Salzburg, Austria, building real-time streaming pipelines with Kafka and data warehouses on ClickHouse.">
+<meta property="og:title" content="Abderrahmen Mira | Data Engineer">
+<meta property="og:description" content="Real-time streaming, Kafka, ClickHouse and cloud data platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">abderrahmen<span>.stream</span></a>
+    <nav aria-label="Sections"><ul>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme">◐</button>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="who">
+        <img src="assets/profile.jpg" alt="Portrait of Abderrahmen Mira" width="64" height="64">
+        <p><strong>Data Engineer in Salzburg, Austria</strong><span class="status">Open to new roles</span></p>
+      </div>
+      <h1>Abderrahmen Mira</h1>
+      <p class="lede">I build the pipelines that move events the moment they happen, and the warehouses that make them worth querying.</p>
+      <p class="sub">3+ years with Kafka, ClickHouse and Kubernetes, running real-time and batch data in production at Axess AG.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:abderrahmen.mira@gmail.com">Email me</a>
+        <a class="btn ghost" href="#experience">See my experience</a>
+      </div>
+    </div>
+
+    <div class="topic" aria-label="A Kafka-style topic showing my career as a stream of records">
+      <div class="topic-head"><span>topic <b>abderrahmen.career</b></span><span>3 partitions</span></div>
+      <div class="lanes">
+        <canvas id="stream" aria-hidden="true"></canvas>
+      </div>
+      <div class="log" id="log" aria-live="off">
+        <div class="row"><span class="off">off 0</span><span>2018-09</span><span><span class="key">bsc.computer_science</span> University of M’sila</span></div>
+        <div class="row"><span class="off">off 1</span><span>2021-07</span><span><span class="key">junior_data_engineer</span> Creative Media</span></div>
+        <div class="row"><span class="off">off 2</span><span>2023-03</span><span><span class="key">msc.computer_science</span> Univ. of Salzburg</span></div>
+        <div class="row"><span class="off">off 3</span><span>2023-05</span><span><span class="key">bi_data_analyst</span> Liebherr</span></div>
+        <div class="row live"><span class="off">off 4</span><span>2024-01</span><span><span class="key">data_engineer</span> Axess AG, live</span></div>
+        <div class="tail" id="tail">consumer lag 0, waiting for offset 5: your team? <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="impact">
+  <div class="wrap">
+    <h2>Production numbers</h2>
+    <p class="intro">Measured on systems I designed and run at Axess AG.</p>
+    <div class="numbers">
+      <div><strong>100K+</strong><span>events per second through Kafka Streams pipelines</span></div>
+      <div><strong>&lt;2 s</strong><span>to load 1,000+ records in bulk with a .NET MassTransit service</span></div>
+      <div><strong>0</strong><span>manual steps left in Kafka topic management, now run by CI/CD</span></div>
+      <div><strong>2</strong><span>Kubernetes platforms running Kafka in production: AKS and Tanzu</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="wrap">
+    <h2>End-to-end data platform</h2>
+    <p class="intro">A production-grade medallion platform I’m building for real-time and batch analytics. Select a stage to see what happens there.</p>
+    <div class="proj-meta"><span><b>Status</b> In progress since June 2026</span><span><b>Pattern</b> Bronze, Silver, Gold</span></div>
+    <div class="pipe" role="tablist" aria-label="Pipeline stages" id="pipe"></div>
+    <div class="panel" role="tabpanel" id="panel" aria-live="polite">
+      <div><h3 id="pTitle"></h3><p id="pText"></p></div>
+      <ul class="tools" id="pTools"></ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="intro">Newest first. Each entry is one record in the log above.</p>
+    <ol class="career" reversed>
+      <li class="now">
+        <span class="off-tag">offset 4</span>
+        <div class="c-top"><h3>Data Engineer</h3><span class="when">Jan 2024 to now</span></div>
+        <p class="org"><b>Axess AG</b>, full-time, Salzburg</p>
+        <p class="group-title">Real-time streaming</p>
+        <ul class="pts">
+          <li>Architected distributed real-time pipelines with <strong>Kafka Streams</strong> (Java) and <strong>Kafka Connect</strong>, processing <strong>100K+ events per second</strong> and keeping legacy systems in sync with PostgreSQL and ClickHouse.</li>
+          <li>Built a <strong>.NET MassTransit</strong> service that streams from Azure Service Bus into ClickHouse, loading <strong>1,000+ records in under 2 seconds</strong> and replacing the legacy Kafka path.</li>
+        </ul>
+        <p class="group-title">Data warehouse</p>
+        <ul class="pts">
+          <li>Designed ingestion pipelines that bring transactional systems and event-driven sources into a <strong>ClickHouse</strong> warehouse.</li>
+          <li>Owned the warehouse design: data modelling, schemas, materialized views and transformation logic tuned for analytics queries.</li>
+        </ul>
+        <p class="group-title">Kubernetes and infrastructure</p>
+        <ul class="pts">
+          <li>Deployed and run Kafka on Kubernetes (<strong>AKS</strong> and <strong>Tanzu</strong>) with high availability and observability for mission-critical event streams.</li>
+          <li>Automated the Kafka topic lifecycle with CI/CD pipelines and Kubernetes Jobs, removing manual operations.</li>
+        </ul>
+        <ul class="tools"><li>Kafka</li><li>Kafka Streams</li><li>Kafka Connect</li><li>ClickHouse</li><li>PostgreSQL</li><li>Kubernetes</li><li>Helm</li><li>Docker</li><li>Java</li><li>C# / .NET</li><li>MassTransit</li><li>Azure Service Bus</li><li>Azure DevOps</li></ul>
+      </li>
+      <li>
+        <span class="off-tag">offset 3</span>
+        <div class="c-top"><h3>BI and Data Analyst Intern</h3><span class="when">May 2023 to Aug 2023</span></div>
+        <p class="org"><b>Liebherr</b>, part-time, Salzburg</p>
+        <ul class="pts">
+          <li>Designed and deployed interactive <strong>Power BI</strong> dashboards that let stakeholders follow trends and make data-informed decisions.</li>
+          <li>Ran analysis end to end, from cleansing and exploration to finding patterns, in support of process optimisation.</li>
+        </ul>
+        <ul class="tools"><li>Power BI</li><li>SSAS</li><li>SSIS</li><li>SSRS</li><li>T-SQL</li><li>SQL Server</li><li>DAX Studio</li><li>Tabular Editor</li><li>Python</li></ul>
+      </li>
+      <li class="edu">
+        <span class="off-tag">offset 2</span>
+        <div class="c-top"><h3>M.Sc. Computer Science</h3><span class="when">Mar 2023 to Dec 2023</span></div>
+        <p class="org"><b>Paris Lodron University of Salzburg</b></p>
+        <ul class="pts"><li>Advanced coursework in Analytics and Knowledge Discovery, Data Science, Applied Statistics and Theoretical Computer Science.</li></ul>
+      </li>
+      <li>
+        <span class="off-tag">offset 1</span>
+        <div class="c-top"><h3>Junior Data Engineer</h3><span class="when">Jul 2021 to Sep 2022</span></div>
+        <p class="org"><b>Creative Media</b>, M’sila, Algeria</p>
+        <ul class="pts">
+          <li>Developed batch pipelines in <strong>PySpark</strong> to clean, transform and prepare datasets for analytics.</li>
+          <li>Built my foundations in data warehousing, ETL and ELT design, data modelling and pipeline architecture.</li>
+        </ul>
+        <ul class="tools"><li>PySpark</li><li>Python</li><li>SQL</li><li>Git</li></ul>
+      </li>
+      <li class="edu">
+        <span class="off-tag">offset 0</span>
+        <div class="c-top"><h3>B.Sc. Computer Science</h3><span class="when">Sep 2018 to Jun 2021</span></div>
+        <p class="org"><b>University of M’sila</b>, Algeria</p>
+        <ul class="pts"><li>Graduated with a GPA of 3.14 / 4.0 (Very Good).</li></ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <h2>Tools I work with</h2>
+    <p class="intro">The ones in bold are what I use every day.</p>
+    <div class="stack">
+      <div><h3>Streaming and messaging</h3><ul><li class="core">Apache Kafka</li><li class="core">Kafka Streams</li><li class="core">Kafka Connect</li><li>Debezium</li><li>Confluent Cloud</li><li>Apache Flink</li><li class="core">Azure Service Bus</li><li>MassTransit</li></ul></div>
+      <div><h3>Storage and warehouses</h3><ul><li class="core">ClickHouse</li><li class="core">PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Oracle</li><li>SQL Server</li></ul></div>
+      <div><h3>Processing and orchestration</h3><ul><li>Apache Spark</li><li>PySpark</li><li>dbt</li><li>Apache Airflow</li><li>Pandas</li><li>NumPy</li></ul></div>
+      <div><h3>Languages</h3><ul><li class="core">Java</li><li class="core">SQL</li><li class="core">C#</li><li>Python</li><li>Bash</li></ul></div>
+      <div><h3>Platform and DevOps</h3><ul><li class="core">Kubernetes</li><li>Helm</li><li>Docker</li><li class="core">Azure DevOps</li><li>AKS</li><li>Tanzu</li><li>Prometheus</li><li>Grafana</li><li>Git</li></ul></div>
+      <div><h3>BI and analytics</h3><ul><li>Power BI</li><li>Tableau</li><li>Apache Superset</li><li>SSAS</li><li>SSIS</li><li>SSRS</li></ul></div>
+    </div>
+    <div class="langs" aria-label="Spoken languages">
+      <div>Arabic<span>native</span></div>
+      <div>English<span>B2</span></div>
+      <div>French<span>B2</span></div>
+      <div>German<span>A2</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Have events that need somewhere to go?</h2>
+    <p class="intro">I’m open to new data engineering roles. Email is the fastest way to reach me.</p>
+    <a class="mail" href="mailto:abderrahmen.mira@gmail.com">abderrahmen.mira@gmail.com</a>
+    <div class="contact-row">
+      <button class="btn ghost" id="copyBtn" type="button">Copy email</button>
+      <span class="copied" id="copied" role="status"></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Abderrahmen Mira, Salzburg</span><code>consumer lag: 0</code></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
